@@ -14,6 +14,7 @@
     warp-terminal
     bash-completion
     wmctrl
+    krita
   ];
 }
   
