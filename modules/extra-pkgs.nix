@@ -15,6 +15,7 @@
     bash-completion
     wmctrl
     krita
+    steam
   ];
 }
   

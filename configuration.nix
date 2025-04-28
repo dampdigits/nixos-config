@@ -120,6 +120,12 @@
   };
 
   # List services that you want to enable:
+  # Steam settings
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # optional, for Steam Remote Play
+    dedicatedServer.openFirewall = true; # optional, for hosting servers
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
