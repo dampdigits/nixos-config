@@ -16,6 +16,8 @@
     wmctrl
     krita
     steam
+    wl-clipboard
+    gnomeExtensions.clipboard-history
   ];
 }
   

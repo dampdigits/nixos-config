@@ -105,6 +105,7 @@
     google-chrome
     vscode-fhs
     fastfetch
+    gcc
     libgcc
     libgccjit
     python3
@@ -129,6 +130,16 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Automatic updating
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.dates = "weekly";
+
+  # Automatic cleanup
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.gc.options = "--delete-older-than 10d";
+  nix.settings.auto-optimise-store = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
