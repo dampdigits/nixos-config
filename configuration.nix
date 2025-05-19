@@ -110,6 +110,7 @@
     libgccjit
     python3
     nodejs_22
+    jdk
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

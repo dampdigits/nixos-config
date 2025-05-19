@@ -18,6 +18,13 @@
     steam
     wl-clipboard
     gnomeExtensions.clipboard-history
+    mesa
+    mesa-demos
+    vulkan-tools
+    pciutils
+    libGL
+    zeroad
+    postman
   ];
 }
   
