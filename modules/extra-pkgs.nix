@@ -29,6 +29,7 @@
     starship
     gnome-tweaks
     eyedropper
+    pywal
   ];
 }
   

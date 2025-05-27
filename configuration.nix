@@ -159,4 +159,5 @@
 
 }
 
-# Author: dampdigits
+
+# Author: dampdigits <dampdigits@gmail.com>

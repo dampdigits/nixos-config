@@ -13,7 +13,7 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
-EXTRA_PKGS_FILE="/home/dampdigits/.config/nixos-config/modules/extra-pkgs.nix"
+EXTRA_PKGS_FILE="/etc/nixos/modules/extra-pkgs.nix"
 
 # Check if extra-pkgs.nix exists
 if [ ! -f "$EXTRA_PKGS_FILE" ]; then
@@ -40,4 +40,5 @@ done
 echo "Rebuilding system with nixos-rebuild switch..."
 nixos-rebuild switch
 
-# Author: dampdigits
+
+# Author: dampdigits <dampdigits@gmail.com>
