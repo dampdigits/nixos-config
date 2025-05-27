@@ -25,6 +25,10 @@
     libGL
     zeroad
     postman
+    virtualenv
+    starship
+    gnome-tweaks
+    eyedropper
   ];
 }
   

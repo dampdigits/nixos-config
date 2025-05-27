@@ -97,20 +97,21 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim # The Nano editor is also installed by default.
-    vim
-    wget
-    git
     curl
-    google-chrome
-    vscode-fhs
     fastfetch
     gcc
+    git
+    gnupg
+    google-chrome
+    jdk
     libgcc
     libgccjit
-    python3
+    neovim # The Nano editor is also installed by default.
     nodejs_22
-    jdk
+    python3
+    vim
+    vscode-fhs
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
