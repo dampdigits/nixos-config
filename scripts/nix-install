@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# ~/.local/.bin/nix-install: Adds package(s) to `$HOME/.config/nixos/modules/extra-pkgs.nix` and executes `nixos-rebuild switch`
+# Usage: sudo nix-install <package1> <package2> ...
+
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run with sudo"
+  exit 1
+fi
+
+if [ $# -eq 0 ]; then
+  echo "Usage: sudo nix-install <package1> <package2> ..."
+  exit 1
+fi
+
+EXTRA_PKGS_FILE="/home/dampdigits/.config/nixos/modules/extra-pkgs.nix"
+
+# Check if extra-pkgs.nix exists
+if [ ! -f "$EXTRA_PKGS_FILE" ]; then
+  echo "Error: $EXTRA_PKGS_FILE not found!"
+  exit 1
+fi
+
+# Loop over all the given packages
+for PACKAGE in "$@"; do
+  # Check if the package is already present
+  if grep -qE "\s+$PACKAGE\s*" "$EXTRA_PKGS_FILE"; then
+    echo "$PACKAGE already present in extra-pkgs.nix."
+  else
+    # Insert the package before the closing ];
+    sed -i "/environment.systemPackages = with pkgs; \[/,/\]/ {
+      /\]/ i\    $PACKAGE
+    }" "$EXTRA_PKGS_FILE"
+
+    echo "$PACKAGE added to extra-pkgs.nix."
+  fi
+done
+
+# Rebuild NixOS configuration
+echo "Rebuilding system with nixos-rebuild switch..."
+nixos-rebuild switch
+
+# Author: dampdigits
