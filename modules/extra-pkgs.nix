@@ -23,13 +23,15 @@
     vulkan-tools
     pciutils
     libGL
-    zeroad
     postman
     virtualenv
     starship
     gnome-tweaks
     eyedropper
     pywal
+    gnomeExtensions.blur-my-shell
+    bluej
+    jellyfin-ffmpeg
   ];
 }
   
