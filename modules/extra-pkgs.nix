@@ -11,7 +11,6 @@
     nerdfonts
     tree
     speedtest-cli
-    warp-terminal
     bash-completion
     wmctrl
     krita
@@ -30,7 +29,6 @@
     eyedropper
     pywal
     gnomeExtensions.blur-my-shell
-    bluej
     jellyfin-ffmpeg
   ];
 }
