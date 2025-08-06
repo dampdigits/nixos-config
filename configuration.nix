@@ -5,6 +5,9 @@
 { config, pkgs, ... }:
 
 {
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -76,43 +79,22 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dampdigits = {
     isNormalUser = true;
     description = "dampdigits";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = with pkgs; [];
   };
 
   # Install firefox.
   programs.firefox.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    curl
-    fastfetch
-    gcc
-    git
-    gnupg
-    google-chrome
-    jdk
-    libgcc
-    libgccjit
-    neovim # The Nano editor is also installed by default.
-    nodejs_22
-    python3
-    vim
-    vscode-fhs
-    wget
-  ];
+  # environment.systemPackages = with pkgs; [];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

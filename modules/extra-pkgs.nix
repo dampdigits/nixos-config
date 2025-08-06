@@ -1,13 +1,28 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
+    curl
+    fastfetch
+    gcc
+    git
+    gnupg
+    google-chrome
+    jdk
+    libgcc
+    libgccjit
+    neovim # The Nano editor is also installed by default.
+    nodejs_22
+    python3
+    vim
+    vscode-fhs
+    wget
     htop
     ulauncher
     kitty
     obs-studio
     vlc
-    gimp-with-plugins
+    gimp3-with-plugins
     nerdfonts
     tree
     speedtest-cli
