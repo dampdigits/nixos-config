@@ -45,6 +45,13 @@
     gnomeExtensions.blur-my-shell
     jellyfin-ffmpeg
     reversal-icon-theme
+    gnomeExtensions.applications-menu
+    gnomeExtensions.user-themes
+    gnomeExtensions.places-status-indicator
+    gnomeExtensions.desktop-icons-ng-ding
+    gnomeExtensions.removable-drive-menu
+    gnomeExtensions.appindicator
+    gnomeExtensions.vitals
   ];
 }
   
