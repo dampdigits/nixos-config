@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# ~/.local/.bin/nix-install: Adds package(s) to `$HOME/.config/nixos/modules/extra-pkgs.nix` and executes `nixos-rebuild switch`
+# ~/.local/.bin/nix-install
+# Description: Adds package(s) to `$HOME/.config/nixos/my-pkgs.nix` and executes `nixos-rebuild switch`
 # Usage: sudo nix-install <package1> <package2> ...
 
 if [ "$EUID" -ne 0 ]; then
@@ -13,26 +14,26 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
-EXTRA_PKGS_FILE="/etc/nixos/modules/extra-pkgs.nix"
+MY_PKGS_FILE="/etc/nixos/my-pkgs.nix"
 
-# Check if extra-pkgs.nix exists
-if [ ! -f "$EXTRA_PKGS_FILE" ]; then
-  echo "Error: $EXTRA_PKGS_FILE not found!"
+# Check if my-pkgs.nix exists
+if [ ! -f "$MY_PKGS_FILE" ]; then
+  echo "Error: $MY_PKGS_FILE not found!"
   exit 1
 fi
 
 # Loop over all the given packages
 for PACKAGE in "$@"; do
   # Check if the package is already present
-  if grep -qE "\s+$PACKAGE\s*" "$EXTRA_PKGS_FILE"; then
-    echo "$PACKAGE already present in extra-pkgs.nix."
+  if grep -qE "\s+$PACKAGE\s*" "$MY_PKGS_FILE"; then
+    echo "$PACKAGE already present in my-pkgs.nix."
   else
     # Insert the package before the closing ];
     sed -i "/environment.systemPackages = with pkgs; \[/,/\]/ {
       /\]/ i\    $PACKAGE
-    }" "$EXTRA_PKGS_FILE"
+    }" "$MY_PKGS_FILE"
 
-    echo "$PACKAGE added to extra-pkgs.nix."
+    echo "$PACKAGE added to my-pkgs.nix."
   fi
 done
 

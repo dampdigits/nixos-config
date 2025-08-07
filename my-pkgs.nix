@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -11,7 +11,7 @@
     jdk
     libgcc
     libgccjit
-    neovim # The Nano editor is also installed by default.
+    neovim
     nodejs_22
     python3
     vim
@@ -23,7 +23,6 @@
     obs-studio
     vlc
     gimp3-with-plugins
-    nerdfonts
     tree
     speedtest-cli
     bash-completion
@@ -45,6 +44,7 @@
     pywal
     gnomeExtensions.blur-my-shell
     jellyfin-ffmpeg
+    reversal-icon-theme
   ];
 }
   
