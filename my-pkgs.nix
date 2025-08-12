@@ -52,6 +52,8 @@
     gnomeExtensions.removable-drive-menu
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
+    pipenv
+    mysql84
   ];
 }
   
