@@ -96,6 +96,13 @@
   # $ nix search wget
   # environment.systemPackages = with pkgs; [];
 
+  # Install MySQL and enable automatic services
+  services.mysql = {
+    enable = true;
+    package = pkgs.mysql84;
+  };
+
+
   fonts.packages = [
     # Add other fonts here
   ] ++ (builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts));

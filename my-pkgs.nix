@@ -4,13 +4,11 @@
   environment.systemPackages = with pkgs; [
     curl
     fastfetch
-    gcc
+    gcc15
     git
     gnupg
     google-chrome
     jdk
-    libgcc
-    libgccjit
     neovim
     nodejs_22
     python3
@@ -53,7 +51,12 @@
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
     pipenv
-    mysql84
+    code-cursor-fhs
+    jetbrains.idea-community
+    maven
+    chromedriver
+    openssl
+    qemu
   ];
 }
   
