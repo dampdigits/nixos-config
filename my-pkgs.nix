@@ -57,7 +57,6 @@
     chromedriver
     openssl
     qemu
-    docker
   ];
 }
   

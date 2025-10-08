@@ -81,11 +81,15 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+  # Enable docker
+  virtualisation.docker.enable = true;
+  virtualisation.docker.enableOnBoot = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dampdigits = {
     isNormalUser = true;
     description = "dampdigits";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [];
   };
 
