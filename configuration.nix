@@ -102,7 +102,7 @@
 
   # Install MySQL and enable automatic services
   services.mysql = {
-    enable = true;
+    enable = false;
     package = pkgs.mysql84;
   };
 
