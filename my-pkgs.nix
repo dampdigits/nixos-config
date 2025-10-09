@@ -57,6 +57,9 @@
     chromedriver
     openssl
     qemu
+    ripgrep
+    gnumake
+    unzip
   ];
 }
   
