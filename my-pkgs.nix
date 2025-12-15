@@ -60,6 +60,8 @@
     ripgrep
     gnumake
     unzip
+    libreoffice-still
+    pnpm
   ];
 }
   
