@@ -43,16 +43,17 @@
     gnomeExtensions.blur-my-shell
     jellyfin-ffmpeg
     reversal-icon-theme
-    gnomeExtensions.applications-menu
-    gnomeExtensions.user-themes
-    gnomeExtensions.places-status-indicator
-    gnomeExtensions.desktop-icons-ng-ding
-    gnomeExtensions.removable-drive-menu
+    gnomeExtensions.accent-gtk-theme
     gnomeExtensions.appindicator
+    gnomeExtensions.applications-menu
+    gnomeExtensions.desktop-icons-ng-ding
+    gnomeExtensions.places-status-indicator
+    gnomeExtensions.removable-drive-menu
+    gnomeExtensions.user-themes
     gnomeExtensions.vitals
     pipenv
     code-cursor-fhs
-    jetbrains.idea-community
+    jetbrains.idea-oss
     maven
     chromedriver
     openssl
@@ -62,6 +63,8 @@
     unzip
     libreoffice-still
     pnpm
+    whitesur-icon-theme
+    whitesur-gtk-theme
   ];
 }
   
