@@ -53,7 +53,6 @@
     gnomeExtensions.vitals
     pipenv
     code-cursor-fhs
-    jetbrains.idea-oss
     maven
     chromedriver
     openssl
@@ -65,6 +64,8 @@
     pnpm
     whitesur-icon-theme
     whitesur-gtk-theme
+    antigravity-fhs
+    rpcs3
   ];
 }
   
