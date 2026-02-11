@@ -65,7 +65,12 @@
     whitesur-icon-theme
     whitesur-gtk-theme
     antigravity-fhs
-    rpcs3
+    pcsx2
+    intel-media-driver
+    intel-vaapi-driver
+    libvdpau-va-gl
+    wine
+    winetricks
   ];
 }
   
