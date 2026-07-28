@@ -39,7 +39,7 @@ done
 
 # Rebuild NixOS configuration
 echo "Rebuilding system with nixos-rebuild switch..."
-nixos-rebuild switch
+nixos-rebuild switch --upgrade
 
 
 # Author: dampdigits <dampdigits@gmail.com>

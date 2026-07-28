@@ -69,8 +69,12 @@
     intel-media-driver
     intel-vaapi-driver
     libvdpau-va-gl
-    wine
+    wineWow64Packages.stableFull
     winetricks
+    gpt-cli
+    tor-browser
+    mullvad-browser
+    inkscape-with-extensions
   ];
 }
   
