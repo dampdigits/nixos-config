@@ -71,9 +71,6 @@
     libvdpau-va-gl
     wineWow64Packages.stableFull
     winetricks
-    gpt-cli
-    tor-browser
-    mullvad-browser
     inkscape-with-extensions
   ];
 }
