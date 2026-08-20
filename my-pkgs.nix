@@ -4,31 +4,28 @@
   environment.systemPackages = with pkgs; [
     curl
     fastfetch
-    gcc15
+    gcc
     git
     gnupg
     google-chrome
     jdk
     neovim
-    nodejs_22
+    nodejs
     python3
     vim
     vscode-fhs
     wget
-    htop
     ulauncher
     kitty
     obs-studio
     vlc
-    gimp3-with-plugins
+    gimp-with-plugins
     tree
     speedtest-cli
     bash-completion
-    wmctrl
     krita
     steam
     wl-clipboard
-    gnomeExtensions.clipboard-history
     mesa
     mesa-demos
     vulkan-tools
@@ -37,13 +34,10 @@
     postman
     virtualenv
     starship
-    gnome-tweaks
     eyedropper
-    pywal
+    gnome-tweaks
+    gnomeExtensions.clipboard-history
     gnomeExtensions.blur-my-shell
-    jellyfin-ffmpeg
-    reversal-icon-theme
-    gnomeExtensions.accent-gtk-theme
     gnomeExtensions.appindicator
     gnomeExtensions.applications-menu
     gnomeExtensions.desktop-icons-ng-ding
@@ -53,10 +47,7 @@
     gnomeExtensions.vitals
     pipenv
     code-cursor-fhs
-    maven
-    chromedriver
     openssl
-    qemu
     ripgrep
     gnumake
     unzip
@@ -72,6 +63,7 @@
     wineWow64Packages.stableFull
     winetricks
     inkscape-with-extensions
+    thunderbird
   ];
 }
   
